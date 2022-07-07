@@ -1,0 +1,14 @@
+boot-server: true
+boot-server-command: |
+  aa
+  aa
+
+container_prefix_name: integration
+create_mysql: true
+create_redis: true
+mysql_port: 3306
+redis_port: 6379
+mock_api_server_admin_port: 18081
+mock_api_server_port: 18080
+create_mock_ai_server: true
+init_sql_file=

@@ -1,0 +1,14 @@
+person:
+  rows:
+    - id: 11
+      name: a name
+      age: 2
+      birthday: 2021-10-11 11:12:13
+      boy: false
+    - id: 10
+      name: a name
+      age: 1
+      birthday: 2021-10-11 11:12:13
+      boy: true
+      nickname: 'a nickname'
+

@@ -1,0 +1,27 @@
+mock_api:
+  - request:
+      method: GET
+      path: /
+    response:
+      headers:
+        Content-Type: application/json
+      body: >
+        [
+          {
+            "id": 1,
+            "name": "User 1"
+          },
+          {
+            "id": 2,
+            "name": "User 2"
+          }
+        ]
+data:
+  rds:
+    driver: mysql
+    tables:
+      person:
+        rows:
+          - id: 10
+  redis: { }
+

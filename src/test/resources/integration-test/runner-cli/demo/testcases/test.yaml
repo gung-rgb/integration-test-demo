@@ -1,0 +1,19 @@
+config:
+  name: hook demo
+  variables:
+    base_url: 'https://postman-echo.com'
+
+teststeps:
+  - name: test api /get
+    variables:
+      prepare_name: 'for-test'
+    request:
+      method: GET
+      url: $base_url/get
+      app_version: 2.8.7
+      device_sn: $device_sn
+      os_platform: ios
+    extract:
+      session_token: body.headers."postman-token"
+    validate:
+      - eq: [ "status_code", 200 ]

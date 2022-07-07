@@ -1,0 +1,29 @@
+- request:
+    headers:
+      X-Service-Name: reservations
+  proxy:
+    host: https://reservations:8080
+
+- request:
+    method: POST
+    path: /search
+    headers:
+      X-Service-Name: users
+    body:
+      matcher: ShouldEqualJSON
+      value: >
+        { "ids": [1,2] }
+  response:
+    headers:
+      Content-Type: application/json
+    body: >
+      [
+        {
+          "id": 1,
+          "name": "User 1"
+        },
+        {
+          "id": 2,
+          "name": "User 2"
+        }
+      ]
